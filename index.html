@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHome Appliances</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: #0f3460;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://www.mysmartprice.com/wp-content/uploads/sites/5/2025/12/LG-3.jpg') center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      background: #e94560;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #0f3460;
+      margin: 10px 0;
+    }
+
+    .product-card button {
+      background: #0f3460;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .offer {
+      background: #e94560;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    footer {
+      background: #0f3460;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width: 600px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>SmartHome</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Upgrade Your Home with Smart Appliances</h2>
+  <p>Energy-efficient • Modern • Reliable</p>
+  <button onclick="shopNow()">Shop Now</button>
+</section>
+
+<section class="section" id="products">
+  <h2>Featured Appliances</h2>
+
+  <div class="products">
+
+    <!-- Refrigerator -->
+    <div class="product-card">
+      <img src="C:\Users\user\Downloads\samsundFRIDGE.jpg">
+      <h3>Smart Refrigerator</h3>
+      <p>Energy-efficient cooling with smart temperature control.</p>
+      <div class="price">₹1,45,000</div>
+      <button onclick="redirectAmazon('https://www.amazon.in/s?k=smart+refrigerator')">Buy Now</button>
+    </div>
+
+    <!-- Washing Machine -->
+    <div class="product-card">
+      <img src="C:\Users\user\Downloads\samsungwasher.jpg">
+      <h3>Washing Machine</h3>
+      <p>Powerful cleaning with water-saving technology.</p>
+      <div class="price">₹52,000</div>
+      <button onclick="redirectAmazon('https://www.amazon.in/s?k=washing+machine')">Buy Now</button>
+    </div>
+
+    <!-- Microwave -->
+    <div class="product-card">
+      <img src="C:\Users\user\Downloads\ifbMICROWAVE.jpg">
+      <h3>Microwave Oven</h3>
+      <p>Fast cooking with smart preset modes.</p>
+      <div class="price">₹18,000</div>
+      <button onclick="redirectAmazon('https://www.amazon.in/s?k=microwave+oven')">Buy Now</button>
+    </div>
+
+    <!-- Smart TV -->
+    <div class="product-card">
+      <img src="C:\Users\user\Downloads\sontTV.jpg">
+      <h3>Smart TV</h3>
+      <p>4K UHD display with built-in streaming apps.</p>
+      <div class="price">₹1,55,000</div>
+      <button onclick="redirectAmazon('https://www.amazon.in/s?k=smart+tv')">Buy Now</button>
+    </div>
+
+    <!-- Air Conditioner -->
+    <div class="product-card">
+      <img src="C:\Users\user\Downloads\HitachiAC2.jpg">
+      <h3>Air Conditioner</h3>
+      <p>1.5 Ton Energy-efficient AC with fast cooling.</p>
+      <div class="price">₹48,000</div>
+      <button onclick="redirectAmazon('https://www.amazon.in/s?k=air+conditioner')">Buy Now</button>
+    </div>
+
+    <!-- Dishwasher -->
+    <div class="product-card">
+      <img src="C:\Users\user\Downloads\boschdishwasher.jpg">
+      <h3>Dishwasher</h3>
+      <p>Smart wash cycles for spotless cleaning.</p>
+      <div class="price">₹48,999</div>
+      <button onclick="redirectAmazon('https://www.amazon.in/s?k=dishwasher')">Buy Now</button>
+    </div>
+
+    <!-- Heater -->
+    <div class="product-card">
+      <img src="C:\Users\user\Downloads\geyser.jpg">
+      <h3>Room Heater</h3>
+      <p>Quick heating with temperature control.</p>
+      <div class="price">₹9,500</div>
+      <button onclick="redirectAmazon('https://www.amazon.in/s?k=room+heater')">Buy Now</button>
+    </div>
+
+    <!-- Clothes Dryer -->
+    <div class="product-card">
+      <img src="C:\Users\user\Downloads\siemensDRYER.jpg">
+      <h3>Clothes Dryer</h3>
+      <p>Efficient drying with fabric care technology.</p>
+      <div class="price">₹79,999</div>
+      <button onclick="redirectAmazon('https://www.amazon.in/s?k=clothes+dryer')">Buy Now</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="offer">
+  <h2>Limited Time Offer!</h2>
+  <p>Get up to 25% OFF on selected smart appliances</p>
+  <button onclick="shopNow()">Grab the Deal</button>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: support@smarthome.com</p>
+  <p>Phone: +91 98765 43210</p>
+</section>
+
+<footer>
+  <p>© 2026 SmartHome Appliances | Digital Marketing Project</p>
+</footer>
+
+<script>
+  function redirectAmazon(url) {
+    window.open(url, "_blank");
+  }
+
+  function shopNow() {
+    document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
